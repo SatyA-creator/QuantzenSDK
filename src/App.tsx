@@ -57,6 +57,7 @@ function App() {
         activeSection={activeSection}
         setActiveSection={setActiveSection}
         closeMobileMenu={() => setMobileMenuOpen(false)}
+        darkMode={darkMode}
       />
 
       <main className={`transition-all duration-300 pt-14 sm:pt-16 pb-4 ${

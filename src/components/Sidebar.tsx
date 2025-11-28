@@ -17,6 +17,7 @@ interface SidebarProps {
   activeSection: string;
   setActiveSection: (section: string) => void;
   closeMobileMenu: () => void;
+  darkMode: boolean;
 }
 
 interface MenuItem {
@@ -108,6 +109,7 @@ export default function Sidebar({
   activeSection,
   setActiveSection,
   closeMobileMenu,
+  darkMode,
 }: SidebarProps) {
   const [expandedMenus, setExpandedMenus] = useState<string[]>(['getting-started']);
 
@@ -135,11 +137,12 @@ export default function Sidebar({
 
   return (
     <aside
-      className={`fixed top-14 sm:top-16 left-0 bottom-0 border-r dark:border-dark-border border-light-border bg-light-surface dark:bg-dark-surface z-40 transition-all duration-300 ${
+      className={`fixed top-14 sm:top-16 left-0 bottom-0 border-r dark:border-dark-border border-light-border dark:bg-dark-surface z-40 transition-all duration-300 ${
         collapsed ? 'w-12 sm:w-16' : 'w-64 sm:w-72'
       } ${
         mobileOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 overflow-y-auto scrollbar-thin scrollbar-thumb-primary-accent/20 scrollbar-track-transparent`}
+      style={{ backgroundColor: darkMode ? undefined : '#e6f0fb' }}
     >
       <nav className="p-2 sm:p-3 space-y-0.5 sm:space-y-1">
         {menuItems.map((item) => {

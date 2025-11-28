@@ -111,7 +111,7 @@ export default function Header({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
   return (
-    <header className="fixed top-0 left-0 right-0 h-14 sm:h-16 border-b border-gray-200 dark:border-dark-border bg-white/95 dark:bg-dark-bg/95 backdrop-blur-md z-40 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 h-14 sm:h-16 border-b border-gray-200 dark:border-dark-border dark:bg-dark-bg/95 backdrop-blur-md z-40 shadow-sm" style={{ backgroundColor: darkMode ? undefined : '#e6f0fb' }}>
       <div className="h-full flex items-center justify-between px-3 sm:px-4 lg:px-6">
         <div className="flex items-center gap-2 sm:gap-4">
           <button
