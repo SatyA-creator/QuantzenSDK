@@ -285,8 +285,8 @@ export default function ContentArea({ activeSection, setActiveSection }: Content
             <img 
               src="/bg-6.jpg" 
               alt="Quantum Computing and Blockchain Security"
-              className="w-full h-full object-cover object-center"
-              style={{ objectPosition: 'center bottom' }}
+              className="w-full h-full object-cover"
+              style={{ objectPosition: 'center center' }}
             />
             {/* <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent flex items-center justify-start pl-6 sm:pl-8 lg:pl-12">
               <div className="text-white">
