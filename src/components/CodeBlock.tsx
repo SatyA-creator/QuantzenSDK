@@ -102,13 +102,16 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
           <pre style={{ 
             fontSize: '14px',
             lineHeight: '1.5',
-            color: 'white',
+            color: '#ffffff',
             margin: '0',
-            fontFamily: 'monospace'
+            fontFamily: 'monospace',
+            fontWeight: '600'
           }}>
             <code id={id} style={{ 
-              color: 'white',
-              fontFamily: 'monospace'
+              color: '#ffffff',
+              fontFamily: 'monospace',
+              fontWeight: '600',
+              textShadow: '0 0 1px rgba(255, 255, 255, 0.5)'
             }}>
               {code}
             </code>
