@@ -9,7 +9,7 @@ function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('quantzen-theme');
-    return saved ? saved === 'dark' : false; // Changed default from true to false for light theme
+    return saved ? saved === 'dark' : false; // Default to light mode
   });
   const [activeSection, setActiveSection] = useState('introduction');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

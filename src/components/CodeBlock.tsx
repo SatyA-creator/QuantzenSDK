@@ -62,9 +62,9 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
             </button>
           </div>
         </div>
-        <div className="p-4 overflow-x-auto">
-          <pre className="text-sm text-dark-text leading-relaxed">
-            <code id={id} className={`language-${language}`}>
+        <div className="p-4 overflow-x-auto bg-dark-surface">
+          <pre className="text-sm text-white leading-relaxed">
+            <code id={id} className={`language-${language} text-white`}>
               {code}
             </code>
           </pre>
