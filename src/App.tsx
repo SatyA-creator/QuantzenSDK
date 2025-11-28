@@ -8,6 +8,11 @@ import TableOfContents from './components/TableOfContents';
 function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
+    // Force reset to light theme by default (remove this after one deployment)
+    if (!localStorage.getItem('quantzen-theme-reset')) {
+      localStorage.removeItem('quantzen-theme');
+      localStorage.setItem('quantzen-theme-reset', 'true');
+    }
     const saved = localStorage.getItem('quantzen-theme');
     return saved ? saved === 'dark' : false; // Default to light mode
   });

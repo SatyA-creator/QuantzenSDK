@@ -31,7 +31,7 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
         </div>
       )}
       <div className="bg-dark-surface border border-white/10 rounded-lg overflow-hidden">
-        <div className="flex items-center justify-between bg-dark-bg/50 border-b border-white/10 px-4 py-2">
+        <div className="flex items-center justify-between bg-dark-bg border-b border-white/10 px-4 py-2">
           <span className="text-xs text-dark-text-secondary uppercase font-medium">
             {language}
           </span>
@@ -46,7 +46,7 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
             )}
             <button
               onClick={handleCopy}
-              className="flex items-center gap-2 px-3 py-1.5 text-xs text-dark-text-secondary hover:text-primary-accent bg-dark-bg/50 hover:bg-primary-accent/10 rounded transition-all duration-200"
+              className="flex items-center gap-2 px-3 py-1.5 text-xs text-dark-text-secondary hover:text-primary-accent bg-dark-bg hover:bg-primary-accent/10 rounded transition-all duration-200"
             >
             {copied ? (
               <>
@@ -64,7 +64,7 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
         </div>
         <div className="p-4 overflow-x-auto bg-dark-surface">
           <pre className="text-sm text-white leading-relaxed">
-            <code id={id} className={`language-${language} text-white`}>
+            <code id={id} className={`language-${language} !text-white`}>
               {code}
             </code>
           </pre>
