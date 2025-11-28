@@ -32,7 +32,7 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
       )}
       {/* Force dark theme styling for code blocks */}
       <div style={{ 
-        backgroundColor: '#161b22', 
+        backgroundColor: 'black', 
         border: '1px solid rgba(255, 255, 255, 0.1)', 
         borderRadius: '8px',
         overflow: 'hidden',
@@ -43,12 +43,12 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '8px 16px',
-          backgroundColor: '#0a0e1a',
+          backgroundColor: 'black',
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
         }}>
           <span style={{ 
             fontSize: '12px',
-            color: '#7d8590',
+            color: 'white',
             textTransform: 'uppercase',
             fontWeight: '500',
             fontFamily: 'monospace'
@@ -72,8 +72,8 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
                 gap: '8px',
                 padding: '6px 12px',
                 fontSize: '12px',
-                backgroundColor: '#0a0e1a',
-                color: '#7d8590',
+                backgroundColor: 'black',
+                color: 'white',
                 border: 'none',
                 borderRadius: '4px',
                 cursor: 'pointer',
@@ -97,17 +97,17 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
         <div style={{ 
           padding: '16px',
           overflowX: 'auto',
-          backgroundColor: '#161b22'
+          backgroundColor: 'black'
         }}>
           <pre style={{ 
             fontSize: '14px',
             lineHeight: '1.5',
-            color: '#e6edf3',
+            color: 'white',
             margin: '0',
             fontFamily: 'monospace'
           }}>
             <code id={id} style={{ 
-              color: '#e6edf3',
+              color: 'white',
               fontFamily: 'monospace'
             }}>
               {code}

@@ -9,7 +9,7 @@ export function introduction() {
         Getting Started
       </h1>
 
-      <h2 id="what-is-quantzen-sdk" className="text-2xl font-semibold mt-8 mb-4">What is the QuantZen™ SDK?</h2>
+      <h2 id="what-is-quantzen-sdk" className="text-2xl font-semibold mt-8 mb-4 text-light-text-primary dark:text-dark-text-primary">What is the QuantZen™ SDK?</h2>
       <p className="text-lg leading-relaxed mb-6">
         QuantZen™ SDK is a TypeScript/JavaScript library that adds quantum-resistant cryptography to blockchain wallets and applications. It enables wallets to generate quantum-safe signatures alongside traditional ECDSA signatures, protecting users from future quantum computing attacks.
       </p>
@@ -21,7 +21,7 @@ export function introduction() {
         </p>
       </div>
 
-      <h2 id="why-quantum-proofing-matters" className="text-2xl font-semibold mt-12 mb-4">Why Quantum-Proofing Matters</h2>
+      <h2 id="why-quantum-proofing-matters" className="text-2xl font-semibold mt-12 mb-4 text-light-text-primary dark:text-dark-text-primary">Why Quantum-Proofing Matters</h2>
       <p className="leading-relaxed mb-4">
         Current blockchain wallets use ECDSA (Elliptic Curve Digital Signature Algorithm) for signing transactions. While secure today, quantum computers can break ECDSA in minutes once they become powerful enough. This puts all blockchain funds at risk.
       </p>
@@ -56,12 +56,12 @@ export function installation() {
       </h1>
 
       <div className="flex items-center justify-between mb-6">
-        <p className="text-lg leading-relaxed">
+        <p className="text-lg leading-relaxed text-light-text-secondary dark:text-dark-text-secondary">
           Install the SDK using npm:
         </p>
         <button
           onClick={() => window.open('https://forms.gle/ve1DFKqcjZ4bUHLk6', '_blank')}
-          className="inline-flex items-center gap-2 px-3 lg:px-4 py-1.5 lg:py-2 bg-primary-accent hover:bg-primary-accent/90 text-white rounded-lg transition-colors font-medium text-sm"
+          className="inline-flex items-center gap-2 px-3 lg:px-4 py-1.5 lg:py-2 bg-primary-accent hover:bg-primary-accent/90 text-white rounded-lg transition-colors font-medium text-sm shadow-lg hover:shadow-xl"
         >
            Download QuantZen™ Quantum Proof SDK
         </button>
@@ -73,7 +73,7 @@ export function installation() {
         code="npm install @quantzen/sdk"
       />
 
-      <p className="text-lg leading-relaxed mb-4 mt-8">
+      <p className="text-lg leading-relaxed mb-4 mt-8 text-light-text-secondary dark:text-dark-text-secondary">
         Or use via CDN:
       </p>
       
@@ -153,17 +153,17 @@ export function walletOverview() {
       </ol>
 
       <div className="grid md:grid-cols-3 gap-6 my-8">
-        <div className="bg-light-surface dark:bg-dark-surface border dark:border-dark-border border-light-border rounded-xl p-6">
+        <div className="bg-gradient-to-br from-light-surface to-light-elevated dark:from-dark-surface dark:to-dark-elevated border border-light-border dark:border-dark-border rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
           <h3 className="text-lg font-semibold text-primary-accent mb-2">Integration Time</h3>
-          <p className="text-2xl font-bold">5 minutes</p>
+          <p className="text-2xl font-bold text-light-text-primary dark:text-dark-text-primary">5 minutes</p>
         </div>
-        <div className="bg-light-surface dark:bg-dark-surface border dark:border-dark-border border-light-border rounded-xl p-6">
+        <div className="bg-gradient-to-br from-light-surface to-light-elevated dark:from-dark-surface dark:to-dark-elevated border border-light-border dark:border-dark-border rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
           <h3 className="text-lg font-semibold text-secondary-accent mb-2">Code Required</h3>
-          <p className="text-2xl font-bold">3 lines minimum</p>
+          <p className="text-2xl font-bold text-light-text-primary dark:text-dark-text-primary">3 lines minimum</p>
         </div>
-        <div className="bg-light-surface dark:bg-dark-surface border dark:border-dark-border border-light-border rounded-xl p-6">
-          <h3 className="text-lg font-semibold text-accent-green mb-2">Infrastructure</h3>
-          <p className="text-2xl font-bold">Zero (works entirely client-side)</p>
+        <div className="bg-gradient-to-br from-light-surface to-light-elevated dark:from-dark-surface dark:to-dark-elevated border border-light-border dark:border-dark-border rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          <h3 className="text-lg font-semibold text-primary-accent mb-2">Infrastructure</h3>
+          <p className="text-2xl font-bold text-light-text-primary dark:text-dark-text-primary">Zero (works entirely client-side)</p>
         </div>
       </div>
     </div>
@@ -177,14 +177,14 @@ export function walletIntegration() {
         Step-by-Step Integration
       </h1>
 
-      <h2 id="step-1" className="text-2xl font-semibold mt-8 mb-4">Step 1: Install SDK</h2>
+      <h2 id="step-1" className="text-2xl font-semibold mt-8 mb-4 text-light-text-primary dark:text-dark-text-primary">Step 1: Install SDK</h2>
       <CodeBlock
         id="step1-install"
         language="bash"
         code="npm install @quantzen/sdk"
       />
 
-      <h2 id="step-2" className="text-2xl font-semibold mt-12 mb-4">Step 2: Import and Initialize</h2>
+      <h2 id="step-2" className="text-2xl font-semibold mt-12 mb-4 text-light-text-primary dark:text-dark-text-primary">Step 2: Import and Initialize</h2>
       <CodeBlock
         id="step2-init"
         language="typescript"
@@ -197,7 +197,7 @@ const wallet = new QuantzenWallet(new MetaMaskAdapter());
 await wallet.initialize();`}
       />
 
-      <h2 id="step-3" className="text-2xl font-semibold mt-12 mb-4">Step 3: Enable Quantum-Proofing</h2>
+      <h2 id="step-3" className="text-2xl font-semibold mt-12 mb-4 text-light-text-primary dark:text-dark-text-primary">Step 3: Enable Quantum-Proofing</h2>
       <CodeBlock
         id="step3-quantum"
         language="typescript"
@@ -1330,15 +1330,15 @@ export function troubleshooting() {
           <div
             key={id}
             id={id}
-            className="border border-white/10 bg-white/5 backdrop-blur-md p-6 rounded-xl hover:bg-white/10 transition-all duration-200"
+            className="border border-light-border dark:border-white/10 bg-light-surface/80 dark:bg-white/5 backdrop-blur-md p-6 rounded-xl hover:bg-light-elevated/90 dark:hover:bg-white/10 transition-all duration-200 shadow-sm hover:shadow-md"
           >
             <div className="flex items-center gap-3 mb-3">
               <Icon className="w-6 h-6 mt-5 text-primary-accent" />
-              <h3 className="text-xl font-semibold">{title}</h3>
+              <h3 className="text-xl font-semibold text-light-text-primary dark:text-dark-text-primary">{title}</h3>
             </div>
 
-            <p className="leading-relaxed text-gray-300">
-              <strong className="text-white">Solution:</strong> {solution}
+            <p className="leading-relaxed text-light-text-secondary dark:text-gray-300">
+              <strong className="text-light-text-primary dark:text-white">Solution:</strong> {solution}
             </p>
           </div>
         ))}
