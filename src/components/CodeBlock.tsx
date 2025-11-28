@@ -6,9 +6,11 @@ interface CodeBlockProps {
   language: string;
   code: string;
   filename?: string;
+  showQuantzenButton?: boolean;
+  onQuantzenClick?: () => void;
 }
 
-export function CodeBlock({ id, language, code, filename }: CodeBlockProps) {
+export function CodeBlock({ id, language, code, filename, showQuantzenButton, onQuantzenClick }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -33,10 +35,19 @@ export function CodeBlock({ id, language, code, filename }: CodeBlockProps) {
           <span className="text-xs text-dark-text-secondary uppercase font-medium">
             {language}
           </span>
-          <button
-            onClick={handleCopy}
-            className="flex items-center gap-2 px-3 py-1.5 text-xs text-dark-text-secondary hover:text-primary-accent bg-dark-bg/50 hover:bg-primary-accent/10 rounded transition-all duration-200"
-          >
+          <div className="flex items-center gap-2">
+            {showQuantzenButton && (
+              <button
+                onClick={onQuantzenClick}
+                className="flex items-center gap-2 px-3 py-1.5 text-xs text-white bg-gradient-to-r from-primary-accent to-secondary-accent hover:from-primary-accent/80 hover:to-secondary-accent/80 rounded transition-all duration-200 font-medium"
+              >
+                Quantzen Quantum Proof
+              </button>
+            )}
+            <button
+              onClick={handleCopy}
+              className="flex items-center gap-2 px-3 py-1.5 text-xs text-dark-text-secondary hover:text-primary-accent bg-dark-bg/50 hover:bg-primary-accent/10 rounded transition-all duration-200"
+            >
             {copied ? (
               <>
                 <Check className="w-3 h-3" />
@@ -48,7 +59,8 @@ export function CodeBlock({ id, language, code, filename }: CodeBlockProps) {
                 Copy
               </>
             )}
-          </button>
+            </button>
+          </div>
         </div>
         <div className="p-4 overflow-x-auto">
           <pre className="text-sm text-dark-text leading-relaxed">
