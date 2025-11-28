@@ -281,12 +281,17 @@ export default function ContentArea({ activeSection, setActiveSection }: Content
     <div className="flex-1 px-4 sm:px-6 py-4 sm:py-6 w-full">
       {activeSection === 'introduction' && (
         <div className="mb-6 sm:mb-8 lg:mb-10">
-          <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden rounded-xl bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 border border-primary-accent/20">
+          <div className="relative w-full h-32 sm:h-48 md:h-56 lg:h-72 overflow-hidden rounded-xl bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 border border-primary-accent/20">
             <img 
               src="/bg-6.jpg" 
               alt="Quantum Computing and Blockchain Security"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: 'center center' }}
+              className="w-full h-full"
+              style={{ 
+                objectFit: 'cover',
+                objectPosition: 'center 30%',
+                minHeight: '100%',
+                width: '100%'
+              }}
             />
             {/* <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent flex items-center justify-start pl-6 sm:pl-8 lg:pl-12">
               <div className="text-white">

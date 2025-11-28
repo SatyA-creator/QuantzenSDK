@@ -31,12 +31,31 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
         </div>
       )}
       {/* Force dark theme styling for code blocks */}
-      <div className="rounded-lg overflow-hidden" style={{ backgroundColor: '#161b22 !important', border: '1px solid rgba(255, 255, 255, 0.1) !important' }}>
-        <div className="flex items-center justify-between px-4 py-2" style={{ backgroundColor: '#0a0e1a !important', borderBottom: '1px solid rgba(255, 255, 255, 0.1) !important' }}>
-          <span className="text-xs text-dark-text-secondary uppercase font-medium" style={{ color: '#7d8590' }}>
+      <div style={{ 
+        backgroundColor: '#161b22', 
+        border: '1px solid rgba(255, 255, 255, 0.1)', 
+        borderRadius: '8px',
+        overflow: 'hidden',
+        margin: '24px 0'
+      }}>
+        <div style={{ 
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '8px 16px',
+          backgroundColor: '#0a0e1a',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+        }}>
+          <span style={{ 
+            fontSize: '12px',
+            color: '#7d8590',
+            textTransform: 'uppercase',
+            fontWeight: '500',
+            fontFamily: 'monospace'
+          }}>
             {language}
           </span>
-          <div className="flex items-center gap-2">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             {showQuantzenButton && (
               <button
                 onClick={onQuantzenClick}
@@ -47,8 +66,19 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
             )}
             <button
               onClick={handleCopy}
-              className="flex items-center gap-2 px-3 py-1.5 text-xs rounded transition-all duration-200"
-              style={{ backgroundColor: '#0a0e1a !important', color: '#7d8590 !important' }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '6px 12px',
+                fontSize: '12px',
+                backgroundColor: '#0a0e1a',
+                color: '#7d8590',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                transition: 'all 0.2s'
+              }}
             >
             {copied ? (
               <>
@@ -64,9 +94,22 @@ export function CodeBlock({ id, language, code, filename, showQuantzenButton, on
             </button>
           </div>
         </div>
-        <div className="p-4 overflow-x-auto" style={{ backgroundColor: '#161b22 !important' }}>
-          <pre className="text-sm leading-relaxed" style={{ color: '#e6edf3 !important' }}>
-            <code id={id} className={`language-${language}`} style={{ color: '#e6edf3 !important' }}>
+        <div style={{ 
+          padding: '16px',
+          overflowX: 'auto',
+          backgroundColor: '#161b22'
+        }}>
+          <pre style={{ 
+            fontSize: '14px',
+            lineHeight: '1.5',
+            color: '#e6edf3',
+            margin: '0',
+            fontFamily: 'monospace'
+          }}>
+            <code id={id} style={{ 
+              color: '#e6edf3',
+              fontFamily: 'monospace'
+            }}>
               {code}
             </code>
           </pre>
