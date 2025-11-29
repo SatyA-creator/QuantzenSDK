@@ -41,7 +41,7 @@ const navigationOrder = [
   'example-custom',
   'faq',
   'troubleshooting',
-  'additional-resources'
+  // 'additional-resources'
 ];
 
 const sectionTitles: Record<string, string> = {
@@ -69,7 +69,7 @@ const sectionTitles: Record<string, string> = {
   'example-custom': 'Custom Wallet Example',
   'faq': 'FAQ',
   'troubleshooting': 'Troubleshooting',
-  'additional-resources': 'Additional Resources'
+  // 'additional-resources': 'Additional Resources'
 };
 
 // Helper function to get section details
@@ -98,7 +98,7 @@ const getSectionDetails = (sectionId: string) => {
     'example-custom': { category: 'Examples', title: 'Custom Wallet' },
     'faq': { category: 'Resources', title: 'FAQ' },
     'troubleshooting': { category: 'Resources', title: 'Troubleshooting' },
-    'additional-resources': { category: 'Resources', title: 'Additional Resources' },
+    // 'additional-resources': { category: 'Resources', title: 'Additional Resources' },
   };
   
   return sectionMap[sectionId] || { category: 'Documentation', title: 'Unknown' };

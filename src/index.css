@@ -237,6 +237,12 @@
     background-color: rgb(0 0 0) !important;
 }
 .prose-light pre code {
-  
-    color: rgb(255 255 255);
+  color: #fdfdfd;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+}
+.prose-light pre {
+    margin-bottom: 0rem;
+}
+.dark .dark\:prose-dark:is(.dark *) pre {
+    margin-bottom: 0rem !important;
 }

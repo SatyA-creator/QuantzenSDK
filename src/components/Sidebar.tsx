@@ -98,7 +98,7 @@ const menuItems: MenuItem[] = [
     children: [
       { id: 'faq', label: 'FAQ' },
       { id: 'troubleshooting', label: 'Troubleshooting' },
-      { id: 'additional-resources', label: 'Additional Resources' },
+      // { id: 'additional-resources', label: 'Additional Resources' },
     ],
   },
 ];

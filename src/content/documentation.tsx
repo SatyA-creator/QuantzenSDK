@@ -55,17 +55,16 @@ export function installation() {
         Installation
       </h1>
 
-      <div className="flex items-center justify-between mb-6">
-        <p className="text-lg leading-relaxed text-light-text-secondary dark:text-dark-text-secondary">
-          Install the SDK using npm:
-        </p>
-        <button
-          onClick={() => window.open('https://forms.gle/ve1DFKqcjZ4bUHLk6', '_blank')}
-          className="inline-flex items-center gap-2 px-3 lg:px-4 py-1.5 lg:py-2 bg-primary-accent hover:bg-primary-accent/90 text-white rounded-lg transition-colors font-medium text-sm shadow-lg hover:shadow-xl"
-        >
-           Download QuantZen™ Quantum Proof SDK
-        </button>
-      </div>
+      <p className="text-lg leading-relaxed text-light-text-secondary dark:text-dark-text-secondary mb-4">
+        Install the SDK using npm:
+      </p>
+
+      <button
+        onClick={() => window.open('https://forms.gle/ve1DFKqcjZ4bUHLk6', '_blank')}
+        className="inline-flex items-center gap-2 px-3 lg:px-4 py-1.5 lg:py-2 bg-primary-accent hover:bg-primary-accent/90 text-white rounded-lg transition-colors font-medium text-sm shadow-lg hover:shadow-xl mb-6"
+      >
+         Download QuantZen™ Quantum Proof SDK
+      </button>
       
       <CodeBlock
         id="npm-install"
@@ -1286,7 +1285,7 @@ await wallet.quantumProofWallet();`}
 }
 
 
-export function faq() { return ( <div data-section="faq"> <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary-accent to-secondary-accent bg-clip-text text-transparent"> FAQ </h1> <h2 id="common-questions" className="text-2xl font-semibold mt-8 mb-4">Common Questions</h2> <h3 id="integration-time" className="text-xl font-semibold mt-6 mb-3">How long does integration take?</h3> <p className="leading-relaxed mb-4"> <strong>For Wallet Providers:</strong> 5 minutes. Just install the SDK, initialize the wallet, and call quantumProofWallet(). </p> <p className="leading-relaxed mb-4"> <strong>For dApps:</strong> 0 minutes if the wallet supports it. Otherwise, optional integration takes about 10-15 minutes. </p> <h3 id="infrastructure" className="text-xl font-semibold mt-6 mb-3">Do I need to deploy any infrastructure?</h3> <p className="leading-relaxed mb-4"> No. The SDK works entirely client-side. All key generation, encryption, and signing happens in the browser. The only optional component is IPFS for audit record storage, which can be configured or omitted. </p> <h3 id="key-recovery" className="text-xl font-semibold mt-6 mb-3">What happens if a user loses their keys?</h3> <p className="leading-relaxed mb-4"> Users can recover their keys in multiple ways: </p> <ul className="space-y-2 mb-4"> <li><strong>Backup File:</strong> Import encrypted backup JSON file</li> <li><strong>Seed Recovery:</strong> Regenerate keys from wallet seed (deterministic)</li> <li><strong>Cross-Device:</strong> Import backup on new device</li> </ul> <h3 id="cost" className="text-xl font-semibold mt-6 mb-3">How much does it cost?</h3> <p className="leading-relaxed mb-4"> The SDK is free and open-source (MIT License). There are no licensing fees or usage costs. The only costs are: </p> <ul className="space-y-2 mb-4"> <li>Gas fees for blockchain transactions (normal)</li> <li>Optional IPFS storage costs (if using Pinata or similar)</li> </ul> <h3 id="algorithm-choice" className="text-xl font-semibold mt-6 mb-3">Which algorithms should I use?</h3> <ul className="space-y-2 mb-4"> <li><strong>Dilithium2:</strong> Fast, smaller signatures (1312 bytes public key). Recommended for most use cases.</li> <li><strong>Dilithium3:</strong> Balanced security and performance (1952 bytes public key). Good for high-value transactions.</li> <li><strong>Dilithium5:</strong> Highest security (2592 bytes public key). Use for maximum security requirements.</li> </ul> <h3 id="blockchain-support" className="text-xl font-semibold mt-6 mb-3">Does it work with all blockchains?</h3> <p className="leading-relaxed mb-4"> Currently, the SDK has full support for: </p> <ul className="space-y-2 mb-4"> <li><strong>EVM Chains:</strong> Ethereum, Polygon, BSC, Arbitrum, etc.</li> <li><strong>Solana:</strong> Native Solana transactions</li> <li><strong>Bitcoin:</strong> Bitcoin transaction signing</li> </ul> <p className="leading-relaxed mb-4"> Move-based chains (Sui, Aptos) have framework support but need completion. </p> </div> ); }
+export function faq() { return ( <div data-section="faq"> <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary-accent to-secondary-accent bg-clip-text text-transparent"> FAQ </h1> <h2 id="common-questions" className="text-2xl font-semibold mt-8 mb-4">Common Questions</h2> <h3 id="integration-time" className="text-xl font-semibold mt-6 mb-3">How long does integration take?</h3> <p className="leading-relaxed mb-4"> <strong>For Wallet Providers:</strong> 5 minutes. Just install the SDK, initialize the wallet, and call quantumProofWallet(). </p> <p className="leading-relaxed mb-4"> <strong>For dApps:</strong> 0 minutes if the wallet supports it. Otherwise, optional integration takes about 10-15 minutes. </p> <h3 id="infrastructure" className="text-xl font-semibold mt-6 mb-3">Do I need to deploy any infrastructure?</h3> <p className="leading-relaxed mb-4"> No. The SDK works entirely client-side. All key generation, encryption, and signing happens in the browser. The only optional component is IPFS for audit record storage, which can be configured or omitted. </p> <h3 id="key-recovery" className="text-xl font-semibold mt-6 mb-3">What happens if a user loses their keys?</h3> <p className="leading-relaxed mb-4"> Users can recover their keys in multiple ways: </p> <ul className="space-y-2 mb-4"> <li><strong>Backup File:</strong> Import encrypted backup JSON file</li> <li><strong>Seed Recovery:</strong> Regenerate keys from wallet seed (deterministic)</li> <li><strong>Cross-Device:</strong> Import backup on new device</li> </ul>  <h3 id="algorithm-choice" className="text-xl font-semibold mt-6 mb-3">Which algorithms should I use?</h3> <ul className="space-y-2 mb-4"> <li><strong>Dilithium2:</strong> Fast, smaller signatures (1312 bytes public key). Recommended for most use cases.</li> <li><strong>Dilithium3:</strong> Balanced security and performance (1952 bytes public key). Good for high-value transactions.</li> <li><strong>Dilithium5:</strong> Highest security (2592 bytes public key). Use for maximum security requirements.</li> </ul> <h3 id="blockchain-support" className="text-xl font-semibold mt-6 mb-3">Does it work with all blockchains?</h3> <p className="leading-relaxed mb-4"> Currently, the SDK has full support for: </p> <ul className="space-y-2 mb-4"> <li><strong>EVM Chains:</strong> Ethereum, Polygon, BSC, Arbitrum, etc.</li> <li><strong>Solana:</strong> Native Solana transactions</li> <li><strong>Bitcoin:</strong> Bitcoin transaction signing</li> </ul> <p className="leading-relaxed mb-4"> Move-based chains (Sui, Aptos) have framework support but need completion. </p> </div> ); }
 export function troubleshooting() {
   const issues = [
     {
@@ -1347,50 +1346,50 @@ export function troubleshooting() {
   );
 }
 
-export function additionalResources() {
-  return (
-    <div data-section="additional-resources">
-      <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary-accent to-secondary-accent bg-clip-text text-transparent">
-        Additional Resources
-      </h1>
+// export function additionalResources() {
+//   return (
+//     <div data-section="additional-resources">
+//       <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary-accent to-secondary-accent bg-clip-text text-transparent">
+//         Additional Resources
+//       </h1>
 
-      <ul className="space-y-2 mb-6">
-        <li>• <a href="#" className="text-primary-accent hover:underline">Full SDK Documentation</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">Quick Start Guide</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">CDN Usage Guide</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">NPM Package</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">QuantZen™ Website</a></li>
-      </ul>
+//       <ul className="space-y-2 mb-6">
+//         <li>• <a href="#" className="text-primary-accent hover:underline">Full SDK Documentation</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">Quick Start Guide</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">CDN Usage Guide</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">NPM Package</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">QuantZen™ Website</a></li>
+//       </ul>
 
-      <div className="mt-8 p-6 bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 rounded-xl border border-primary-accent/30">
-        <p className="text-center leading-relaxed">
-          <strong>QuantZen™ SDK</strong> - Making quantum-resistant cryptography accessible to developers worldwide.
-        </p>
-        <p className="text-center mt-2">
-          Visit us at <a href="https://www.quantzen.live" className="text-primary-accent hover:underline">https://www.quantzen.live</a>
-        </p>
-      </div>
+//       <div className="mt-8 p-6 bg-gradient-to-r from-primary-accent/10 to-secondary-accent/10 rounded-xl border border-primary-accent/30">
+//         <p className="text-center leading-relaxed">
+//           <strong>QuantZen™ SDK</strong> - Making quantum-resistant cryptography accessible to developers worldwide.
+//         </p>
+//         <p className="text-center mt-2">
+//           Visit us at <a href="https://www.quantzen.live" className="text-primary-accent hover:underline">https://www.quantzen.live</a>
+//         </p>
+//       </div>
 
-      <h2 id="documentation" className="text-2xl font-semibold mt-8 mb-4">Documentation</h2>
-      <ul className="space-y-2 my-6">
-        <li>• <a href="#" className="text-primary-accent hover:underline">API Reference</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">GitHub Repository</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">Example Projects</a></li>
-      </ul>
+//       <h2 id="documentation" className="text-2xl font-semibold mt-8 mb-4">Documentation</h2>
+//       <ul className="space-y-2 my-6">
+//         <li>• <a href="#" className="text-primary-accent hover:underline">API Reference</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">GitHub Repository</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">Example Projects</a></li>
+//       </ul>
 
-      <h2 id="support" className="text-2xl font-semibold mt-8 mb-4">Support</h2>
-      <ul className="space-y-2 my-6">
-        <li>• <a href="#" className="text-primary-accent hover:underline">Discord Community</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">Technical Support</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">Bug Reports</a></li>
-      </ul>
+//       <h2 id="support" className="text-2xl font-semibold mt-8 mb-4">Support</h2>
+//       <ul className="space-y-2 my-6">
+//         <li>• <a href="#" className="text-primary-accent hover:underline">Discord Community</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">Technical Support</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">Bug Reports</a></li>
+//       </ul>
 
-      <h2 id="learning" className="text-2xl font-semibold mt-8 mb-4">Learning</h2>
-      <ul className="space-y-2 my-6">
-        <li>• <a href="#" className="text-primary-accent hover:underline">Post-Quantum Cryptography Primer</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">NIST Standards Overview</a></li>
-        <li>• <a href="#" className="text-primary-accent hover:underline">Blockchain Security Best Practices</a></li>
-      </ul>
-    </div>
-  );
-}
+//       <h2 id="learning" className="text-2xl font-semibold mt-8 mb-4">Learning</h2>
+//       <ul className="space-y-2 my-6">
+//         <li>• <a href="#" className="text-primary-accent hover:underline">Post-Quantum Cryptography Primer</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">NIST Standards Overview</a></li>
+//         <li>• <a href="#" className="text-primary-accent hover:underline">Blockchain Security Best Practices</a></li>
+//       </ul>
+//     </div>
+//   );
+// }
