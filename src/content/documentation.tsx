@@ -55,16 +55,16 @@ export function installation() {
         Installation
       </h1>
 
-      <p className="text-lg leading-relaxed text-light-text-secondary dark:text-dark-text-secondary mb-4">
-        Install the SDK using npm:
-      </p>
-
       <button
         onClick={() => window.open('https://forms.gle/ve1DFKqcjZ4bUHLk6', '_blank')}
         className="inline-flex items-center gap-2 px-3 lg:px-4 py-1.5 lg:py-2 bg-primary-accent hover:bg-primary-accent/90 text-white rounded-lg transition-colors font-medium text-sm shadow-lg hover:shadow-xl mb-6"
       >
          Download QuantZen™ Quantum Proof SDK
       </button>
+
+      <p className="text-lg leading-relaxed text-light-text-secondary dark:text-dark-text-secondary mb-4">
+        Install the SDK using npm:
+      </p>
       
       <CodeBlock
         id="npm-install"
